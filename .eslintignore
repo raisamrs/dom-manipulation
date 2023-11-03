@@ -2,3 +2,4 @@
 /cypress
 /libs
 cypress.config.js
+eslint max-len: [{ "code": 400 }]
