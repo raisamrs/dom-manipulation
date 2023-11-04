@@ -51,15 +51,11 @@ changeTextToUpperCase('.main-content .center-content p:nth-child(1)', 'TEXTO PAD
 // Crie e execute uma função que exiba o conteúdo de todas as tags <p> da seção principal. Ou seja, filhas da classe center-content;
 // Os conteúdos devem ser separados por espaços.
 
-/* const showChangeOfContent = (catched, changed) => {
-  const tags = document.querySelectorAll(catched);
-  let change = '';
-  for (let i = 0; i < catched.length; i += 1) {
-    change = document.querySelector(changed);
-    change.innerHTML += ` ${tags[i].innerHTML}  `;
-  }
-  return change;
+const showChangeOfContent = (catched, changed) => {
+  const contentParagraphs = document.querySelectorAll(catched);
+  document.querySelector(changed).innerHTML = `${contentParagraphs[0].innerHTML} |  `;
+  document.querySelector(changed).innerHTML += `${contentParagraphs[1].innerHTML} | `;
+  document.querySelector(changed).innerHTML += `${contentParagraphs[2].innerHTML}  `;
 };
 
-showChangeOfContent('.center-content', 'footer p');
- */
+showChangeOfContent('.center-content p', 'footer p');
